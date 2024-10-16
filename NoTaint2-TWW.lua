@@ -155,10 +155,7 @@ if not NoTaint2_CleanStaticPopups then
 
     -- In case the stack check is failed, assure the game menu entrance.
     -- Running cleanAll() multi times has no side effects.
-    local GMButtonEdit = _G["GameMenuButtonEditMode"]
-    if GMButtonEdit then
-        GMButtonEdit:HookScript("OnClick", cleanAll)
-    end
+    GameMenuButtonAddOns:HookScript("OnClick", cleanAll)
 end
 
 if not NoTaint2_Proc_StopEnterWorldLayout then
